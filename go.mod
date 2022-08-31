@@ -4,7 +4,7 @@ go 1.19
 
 require (
 	github.com/civo/civogo v0.3.7
-	github.com/libdns/libdns v0.2.0
+	github.com/libdns/libdns v0.2.1
 )
 
 require (
