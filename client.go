@@ -3,7 +3,6 @@ package civo
 import (
 	"context"
 	"github.com/libdns/libdns"
-	"strings"
 	"sync"
 	"time"
 
@@ -48,7 +47,7 @@ func (p *Provider) getDNSEntries(ctx context.Context, zone string) ([]libdns.Rec
 
 	for _, entry := range dnsRecords {
 		record := libdns.Record{
-			Name:  entry.Name + "." + strings.Trim(zone, ".") + ".",
+			Name:  libdns.RelativeName(entry.Name, zone),
 			Value: entry.Value,
 			Type:  string(entry.Type),
 			TTL:   time.Duration(entry.TTL) * time.Second,
@@ -74,7 +73,7 @@ func (p *Provider) addDNSEntry(ctx context.Context, zone string, record libdns.R
 	}
 
 	dnsRecord, err := p.client.CreateDNSRecord(domain.ID, &civogo.DNSRecordConfig{
-		Name:  strings.Trim(strings.ReplaceAll(record.Name, zone, ""), "."),
+		Name:  libdns.AbsoluteName(record.Name, zone),
 		Value: record.Value,
 		Type:  civogo.DNSRecordType(record.Type),
 		TTL:   int(record.TTL.Seconds()),
@@ -131,7 +130,7 @@ func (p *Provider) updateDNSEntry(ctx context.Context, zone string, record libdn
 		return record, err
 	}
 	_, err = p.client.UpdateDNSRecord(dnsRecord, &civogo.DNSRecordConfig{
-		Name:  strings.Trim(strings.ReplaceAll(record.Name, zone, ""), "."),
+		Name:  libdns.AbsoluteName(record.Name, zone),
 		Value: record.Value,
 		Type:  civogo.DNSRecordType(record.Type),
 		TTL:   int(record.TTL.Seconds()),

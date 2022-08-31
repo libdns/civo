@@ -30,13 +30,14 @@ func main() {
 		fmt.Printf("ERROR: %s\n", err.Error())
 	}
 
-	testName := "libdnsx-test"
+	testName := "libdns-test"
 	testId := ""
 	for _, record := range records {
 		fmt.Printf("%s (.%s): %s, %s\n", record.Name, zone, record.Value, record.Type)
-		if record.Name == (testName + "." + zone + ".") {
+		if record.Name == testName {
 			testId = record.ID
 		}
+		fmt.Println(record.Name)
 	}
 
 	if testId != "" {
