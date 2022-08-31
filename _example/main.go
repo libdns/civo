@@ -3,10 +3,10 @@ package main
 import (
 	"context"
 	"fmt"
-	"github.com/libdns/civo"
 	"os"
 	"time"
 
+	"github.com/libdns/civo"
 	"github.com/libdns/libdns"
 )
 
@@ -37,7 +37,6 @@ func main() {
 		if record.Name == testName {
 			testId = record.ID
 		}
-		fmt.Println(record.Name)
 	}
 
 	if testId != "" {
