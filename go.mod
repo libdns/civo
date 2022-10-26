@@ -3,7 +3,7 @@ module github.com/libdns/civo
 go 1.19
 
 require (
-	github.com/civo/civogo v0.3.14
+	github.com/civo/civogo v0.3.16
 	github.com/libdns/libdns v0.2.1
 )
 
