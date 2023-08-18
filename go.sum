@@ -7,8 +7,8 @@ github.com/census-instrumentation/opencensus-proto v0.2.1/go.mod h1:f6KPmirojxKA
 github.com/chzyer/logex v1.1.10/go.mod h1:+Ywpsq7O8HXn0nuIou7OrIPyXbp3wmkHB+jjWRnGsAI=
 github.com/chzyer/readline v0.0.0-20180603132655-2972be24d48e/go.mod h1:nSuG5e5PlCu98SY8svDHJxuZscDgtXS6KTTbou5AhLI=
 github.com/chzyer/test v0.0.0-20180213035817-a1ea475d72b1/go.mod h1:Q3SI9o4m/ZMnBNeIyt5eFwwo7qiLfzFZmjNmxjkiQlU=
-github.com/civo/civogo v0.3.42 h1:+9W/EFGtk37l0WzD/evktrGbqXE6/MM4TtHuJ5hnPd0=
-github.com/civo/civogo v0.3.42/go.mod h1:54lv/FOf7gh6wE9ZwVdw4yBehk8V1CvU9aWa4v6dvW0=
+github.com/civo/civogo v0.3.43 h1:xKmarkgD/a7PDEpeOHdoYKmBl43D1Dc5wk33vmcw9LU=
+github.com/civo/civogo v0.3.43/go.mod h1:54lv/FOf7gh6wE9ZwVdw4yBehk8V1CvU9aWa4v6dvW0=
 github.com/client9/misspell v0.3.4/go.mod h1:qj6jICC3Q7zFZvVWo7KLAzC3yx5G7kyvSDkc90ppPyw=
 github.com/creack/pty v1.1.9/go.mod h1:oKZEueFk5CKHvIhNR5MUki03XCEU+Q6VDXinZuGJ33E=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
